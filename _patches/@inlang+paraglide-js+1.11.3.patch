@@ -1,0 +1,17 @@
+diff --git a/node_modules/@inlang/paraglide-js/dist/index.js b/node_modules/@inlang/paraglide-js/dist/index.js
+index 7587a49..9ffbbc3 100644
+--- a/node_modules/@inlang/paraglide-js/dist/index.js
++++ b/node_modules/@inlang/paraglide-js/dist/index.js
+@@ -11026,9 +11026,10 @@ export let languageTag = () => sourceLanguageTag
+  *
+  * @param {AvailableLanguageTag | (() => AvailableLanguageTag)} tag
+  */
+-export const setLanguageTag = (tag) => {
++export const setLanguageTag = async (tag) => {
+     if (typeof tag === "function") {
+-        languageTag = enforceLanguageTag(tag)
++        const finalTag = await tag();
++        languageTag = enforceLanguageTag(() => finalTag);
+     } else {
+         languageTag = enforceLanguageTag(() => tag)
+     }

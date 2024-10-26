@@ -1,0 +1,16 @@
+diff --git a/node_modules/@inlang/paraglide-next/dist/paraglide-next/src/app/getLanguage.server.js b/node_modules/@inlang/paraglide-next/dist/paraglide-next/src/app/getLanguage.server.js
+index 78918df..882ba56 100644
+--- a/node_modules/@inlang/paraglide-next/dist/paraglide-next/src/app/getLanguage.server.js
++++ b/node_modules/@inlang/paraglide-next/dist/paraglide-next/src/app/getLanguage.server.js
+@@ -9,9 +9,9 @@ import { PARAGLIDE_LANGUAGE_HEADER_NAME } from './constants.js';
+  * THIS WILL BECOME OBSOLETE ONCE WE FIGURE OUT HOW TO SET THE LANGUAGE BEFORE ANY NEXT CODE RUNS
+  * Once that's the case we will be able to just use `languageTag()` instead
+  */
+-function getLanguage() {
++async function getLanguage() {
+     try {
+-        const langHeader = headers().get(PARAGLIDE_LANGUAGE_HEADER_NAME);
++        const langHeader = (await headers()).get(PARAGLIDE_LANGUAGE_HEADER_NAME);
+         const lang = isAvailableLanguageTag(langHeader) ? langHeader : sourceLanguageTag;
+         return lang;
+     }

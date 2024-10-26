@@ -1,0 +1,22 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "loginOrCreateAccount": "Acessar painel",
+  "loginFillEmailToLogin": "Digite seu e-mail para acessar",
+  "loginEmailPlaceholder": "seu-melhor-email@example.com",
+  "loginEnter": "Entrar",
+  "loginCreateAccount": "Criar uma conta",
+  "loginFillEmailToCreateAccount": "Digite seu e-mail para criar uma conta",
+  "loginCreateAccountButton": "Criar Conta",
+  "email": "E-mail",
+  "loginOrCreateAnAccount": "Ou crie uma conta",
+  "queuePageSubtitle": "Aqui você pode gerenciar sua fila de atendimento",
+  "queuePageTitle": "Fila de atendimento",
+  "dashboardTitle": "Dashboard",
+  "dashboardSubtitle": "Aqui você pode ter um resumo da sua empresa",
+  "navDashboard": "Dashboard",
+  "navQueue": "Fila de atendimentos",
+  "navSettings": "Configurações",
+  "queuePageEmptyTitle": "Você ainda não tem ninguém na fila",
+  "queuePageEmptySubtitle": "Ninguém na fila ainda",
+  "queuePageEmptyButton": "Cadastrar Novo Atendimento"
+}

@@ -1,7 +1,17 @@
+import { paraglide } from "@inlang/paraglide-next/plugin";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  i18n: {
+    locales: ["pt-br"],
+    defaultLocale: "pt-br",
+  },
 };
 
-export default nextConfig;
+export default paraglide({
+  paraglide: {
+    project: "./project.inlang",
+    outdir: "./paraglide",
+  },
+  ...nextConfig,
+});
